@@ -4,7 +4,9 @@
     "start": "roadhog server",
     "build": "roadhog build",
     "lint": "eslint --ext .js src test",
-    "precommit": "npm run lint"
+    "precommit": "npm run lint",
+    "lint-staged": "lint-staged",
+    "lint-staged:js": "eslint --ext .js"
   },
   "dependencies": {
     "antd-mobile": "^2.2.3",

@@ -1,8 +1,8 @@
 {
   "less.compile": {
     "compress": false, // true => remove surplus whitespace
-    "sourceMap": true, // true => generate source maps (.css.map files)
+    "sourceMap": false, // true => generate source maps (.css.map files)
     "out": true, // false => DON'T output .css files (overridable per-file, see below)
-    "autoprefixer": "> 5%",
+    "autoprefixer": "> 5%", // 添加前缀
   }
 }

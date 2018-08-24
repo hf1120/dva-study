@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import styles from './Home.less';
 
-const hh='nuihoa';
+const hh='nuihoa233';
 export default class Home extends PureComponent {
 render() {
 return (

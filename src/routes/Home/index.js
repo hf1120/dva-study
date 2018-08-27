@@ -4,7 +4,9 @@ import styles from './Home.less';
 export default class Home extends PureComponent {
   componentDidMount() {
     const a =1;
-    if (a)
+        if (a)
+
+
     {
       console.log(a);
     }

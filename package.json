@@ -27,5 +27,20 @@
     "prettier": "^1.14.2",
     "redbox-react": "^1.4.3",
     "roadhog": "^2.0.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "prettier"
+    ],
+    "plugins": [
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": "error"
+    }
+  },
+  "prettier": {
+    "singleQuote": true,
+    "semi": false
   }
 }

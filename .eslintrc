@@ -1,0 +1,32 @@
+{
+  "extends": "airbnb",
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true
+  },
+  "rules": {
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
+    "linebreak-style": "off",
+    "react/prop-types": 0,
+    "no-underscore-dangle": 0,
+    "react/prefer-stateless-function": 0,
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": ["Link"],
+        "specialLink": ["to"]
+      }
+    ],
+    "react/no-array-index-key": 0
+  },
+  "globals": {
+    "var1": true,
+    "var2": false
+  }
+}

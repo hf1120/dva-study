@@ -4,7 +4,7 @@ export default class IndexPage extends PureComponent {
   componentDidMount() {
     const a = 1121;
     if (a) {
-      console.log(a);
+      // console.log(a);
     }
   }
 

@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 
 export default class IndexPage extends PureComponent {
   componentDidMount() {
-    const a = 1;
+    const a = 111;
     if (a) {
       console.log(a);
     }

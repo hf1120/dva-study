@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import styles from './Index.less';
 
 export default class IndexPage extends PureComponent {
   componentDidMount() {
@@ -9,8 +10,6 @@ export default class IndexPage extends PureComponent {
   }
 
   render() {
-    return (
-      <div>1</div>
-    );
+    return <div className={styles.center}>1</div>;
   }
 }

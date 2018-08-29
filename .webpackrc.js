@@ -19,9 +19,9 @@ export default {
   },
   ignoreMomentLocale: true,
   // theme: './src/theme.js',
-  html: {
+  /* html: {
     template: './src/index.ejs',
-  },
+  }, */
   lessLoaderOptions: {
     javascriptEnabled: true,
   },

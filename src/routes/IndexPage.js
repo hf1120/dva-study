@@ -3,7 +3,7 @@ import styles from './Index.less';
 
 export default class IndexPage extends PureComponent {
   componentDidMount() {
-    const a = 1121;
+    const a = 1111;
     if (a) {
       // console.log(a);
     }

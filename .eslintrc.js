@@ -1,5 +1,12 @@
+/**
+ * 所有注释掉的代码，都不是ant design pro自带的，而是从其他地方看到的
+ */
+
 module.exports = {
+  // 项目使用了React需要安装一个babel-eslint
   parser: 'babel-eslint',
+  // 如果不是用插件，可以这样
+  // extends: 'eslint:recommended',
   extends: ['airbnb', 'prettier'],
   env: {
     browser: true,
@@ -65,7 +72,9 @@ module.exports = {
     ecmaFeatures: {
       // 可以使用es6的object rest/spread，例如：...
       experimentalObjectRestSpread: true,
+      // jsx: true,
     },
+    // sourceType: 'module',
   },
   settings: {
     polyfills: ['fetch', 'promises'],

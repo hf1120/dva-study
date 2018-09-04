@@ -1,4 +1,4 @@
-import { query500 } from '../services/api';
+import * as API from '../services/api';
 
 export default {
   namespace: 'example',
@@ -13,7 +13,7 @@ export default {
 
   effects: {
     *fetch500({ payload }, { call, put }) {
-      const response = yield call(query500, payload);
+      const response = yield call(API.query500, payload);
       yield put({
         type: 'save',
         payload: response.data,

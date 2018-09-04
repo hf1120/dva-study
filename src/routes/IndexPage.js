@@ -2,8 +2,9 @@ import React, { PureComponent } from 'react';
 import { connect } from 'dva';
 import styles from './Index.less';
 
-@connect(({ example }) => ({
+@connect(({ example, loading }) => ({
   example,
+  loading,
 }))
 export default class IndexPage extends PureComponent {
   componentDidMount() {

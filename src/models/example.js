@@ -1,18 +1,23 @@
+import { query500 } from '../services/api';
 
 export default {
-
   namespace: 'example',
 
   state: {},
 
   subscriptions: {
-    setup({ dispatch, history }) {  // eslint-disable-line
+    setup() {
+      // eslint-disable-line
     },
   },
 
   effects: {
-    *fetch({ payload }, { call, put }) {  // eslint-disable-line
-      yield put({ type: 'save' });
+    *fetch500({ payload }, { call, put }) {
+      const response = yield call(query500, payload);
+      yield put({
+        type: 'save',
+        payload: response.data,
+      });
     },
   },
 
@@ -21,5 +26,4 @@ export default {
       return { ...state, ...action.payload };
     },
   },
-
 };

@@ -1,12 +1,16 @@
 import React, { PureComponent } from 'react';
+import { connect } from 'dva';
 import styles from './Index.less';
 
+@connect(({ example }) => ({
+  example,
+}))
 export default class IndexPage extends PureComponent {
   componentDidMount() {
-    const a = 1111;
-    if (a) {
-      // console.log(a);
-    }
+    const { dispatch } = this.props;
+    dispatch({
+      type: 'example/fetch500',
+    });
   }
 
   render() {

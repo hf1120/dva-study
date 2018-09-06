@@ -1,9 +1,49 @@
+@import '../../assets/less/common.less';
+
 #header {
+  height: 87/75rem;
+  background: url(../../assets/images/search-bg.png) center no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
   :global {
     .headerWrap {
+      width: 100%;
       display: flex;
       justify-content: space-around;
-      background: red;
+      & > a {
+        margin-top: 6/75rem;
+        color: #fff;
+        em {
+          font-size: 30/75rem;
+        }
+      }
+      .header-center {
+        .percent(620, 'width');
+        position: relative;
+        span {
+          position: absolute;
+          left: 23/75rem;
+          top: 8/75rem;
+          em {
+            position: absolute;
+            font-size: 30/75rem;
+            color: #fff;
+          }
+        }
+        input {
+          width: 100%;
+          height: 78/75rem;
+          background: rgba(255, 255, 255, 0.8);
+          border: none;
+          border-radius: 8/75rem;
+          outline: 0 none;
+          font-size: 30/75rem;
+          color: #fff;
+          padding-left: 62/75rem;
+          box-sizing: border-box;
+        }
+      }
     }
   }
 }

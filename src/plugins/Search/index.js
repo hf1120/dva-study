@@ -5,16 +5,16 @@ const Search = () => {
   return (
     <div id={styles.header}>
       <div className="headerWrap">
-        <a className="headerLeft">
+        <a>
           <em className="iconfont icon-fenlei" />
         </a>
         <div className="header-center">
-          <span className="icon-search">
+          <span>
             <em className="iconfont icon-sousuo" />
           </span>
-          <input className="header-search" placeholder="青选择要输入的内容" />
+          <input value="青选择要输入的内容" />
         </div>
-        <a className="header-right">
+        <a>
           <em className="iconfont icon-xiaoxi" />
         </a>
       </div>

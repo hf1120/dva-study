@@ -16,6 +16,7 @@ export default {
   },
   alias: {
     components: path.resolve(__dirname, 'src/components/'),
+    plugins: path.resolve(__dirname, 'src/plugins/'),
   },
   ignoreMomentLocale: true,
   // theme: './src/theme.js',

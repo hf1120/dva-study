@@ -1,9 +1,10 @@
 import React from 'react';
 import styles from './Search.less';
 
-const Search = () => {
+const Search = porps => {
+  const { styl } = porps;
   return (
-    <div id={styles.header}>
+    <div id={styles.header} style={{ ...styl }}>
       <div className="headerWrap">
         <a>
           <em className="iconfont icon-fenlei" />
@@ -12,7 +13,7 @@ const Search = () => {
           <span>
             <em className="iconfont icon-sousuo" />
           </span>
-          <input value="青选择要输入的内容" />
+          <input defaultValue="请选择要输入的内容" />
         </div>
         <a>
           <em className="iconfont icon-xiaoxi" />
@@ -21,7 +22,5 @@ const Search = () => {
     </div>
   );
 };
-
-Search.propTypes = {};
 
 export default Search;

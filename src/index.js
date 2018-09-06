@@ -1,7 +1,7 @@
 import dva from 'dva';
 import createLoading from 'dva-loading';
 import createHistory from 'history/createHashHistory';
-import FastClick from 'fastclick';
+// import FastClick from 'fastclick';
 import 'moment/locale/zh-cn';
 import './index.less';
 
@@ -21,4 +21,4 @@ app.router(require('./router').default);
 // 5. Start
 app.start('#root');
 
-FastClick.attach(document.body);
+// FastClick.attach(document.body);

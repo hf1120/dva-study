@@ -1,11 +1,15 @@
 import React, { PureComponent } from 'react';
 import Search from 'plugins/Search';
+import CarouselStand from 'plugins/CarouselStand';
+import GridStand from 'plugins/GridStand';
 
 export default class Home extends PureComponent {
   render() {
     return (
       <div>
-        <Search />1
+        <Search styl={{ position: 'fixed', zIndex: 2, width: '100%' }} />
+        <CarouselStand />
+        <GridStand />
       </div>
     );
   }

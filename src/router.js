@@ -8,7 +8,7 @@ function RouterConfig({ history, app }) {
     <Router history={history}>
       <Switch>
         {Object.keys(routerConfig).map(item => {
-          return <Route key={item} path="/" exact component={routerConfig[item].component} />;
+          return <Route key={item} path={item} exact component={routerConfig[item].component} />;
         })}
       </Switch>
     </Router>

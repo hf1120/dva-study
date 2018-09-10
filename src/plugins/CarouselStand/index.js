@@ -1,3 +1,8 @@
+/**
+ * -----------------------------------------------
+ * @描述：跑马灯
+ * -----------------------------------------------
+ */
 import React from 'react';
 import { Carousel } from 'antd-mobile';
 import styles from './Carousel.less';
@@ -14,7 +19,7 @@ const CarouselStand = props => {
   return (
     <div id={styles.carousel} style={{ ...styl }}>
       <Carousel
-        autoplay
+        // autoplay
         infinite
         height="350px"
         beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}

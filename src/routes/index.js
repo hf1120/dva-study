@@ -1,31 +1,52 @@
-import React from 'react';
+/**
+ * -----------------------------------------------
+ * @描述：底部导航
+ * -----------------------------------------------
+ */
+import React, { PureComponent } from 'react';
 import { TabBar } from 'antd-mobile';
+import _ from 'lodash';
 import Home from './Home';
+import MyCenter from './MyCenter';
+import styles from './index.less';
 
-export default class TabBarExample extends React.Component {
-  constructor(props) {
-    super(props);
+class Index extends PureComponent {
+  constructor() {
+    super();
     this.state = {
       selectedTab: 'redTab',
     };
   }
 
-  renderContent = () => {
+  renderContent = pageText => {
+    let currentDom;
+    switch (pageText) {
+      case 'homeTab':
+        currentDom = <Home />;
+        break;
+      case 'myCenterTab':
+        currentDom = <MyCenter />;
+        break;
+      default:
+        currentDom = <Home />;
+    }
     return (
       <div style={{ backgroundColor: 'white', height: '100%', textAlign: 'center' }}>
-        <Home />
+        {currentDom}
       </div>
     );
   };
 
   render() {
+    console.log(_({ a: { b: 2 } }));
     const { selectedTab } = this.state;
     return (
-      <div>
+      <div id={styles.header}>
         <TabBar
           unselectedTintColor="#949494"
           tintColor="#33A3F4"
           barTintColor="white"
+          prerenderingSiblingsNumber={0}
           hidden={false}
         >
           <TabBar.Item
@@ -51,16 +72,16 @@ export default class TabBarExample extends React.Component {
                 }}
               />
             }
-            selected={selectedTab === 'blueTab'}
+            selected={selectedTab === 'homeTab'}
             badge={1}
             onPress={() => {
               this.setState({
-                selectedTab: 'blueTab',
+                selectedTab: 'homeTab',
               });
             }}
             data-seed="logId"
           >
-            {this.renderContent('Life')}
+            {this.renderContent('homeTab')}
           </TabBar.Item>
           <TabBar.Item
             icon={
@@ -136,17 +157,19 @@ export default class TabBarExample extends React.Component {
             }}
             title="My"
             key="my"
-            selected={selectedTab === 'yellowTab'}
+            selected={selectedTab === 'myCenterTab'}
             onPress={() => {
               this.setState({
-                selectedTab: 'yellowTab',
+                selectedTab: 'myCenterTab',
               });
             }}
           >
-            {this.renderContent('My')}
+            {this.renderContent('myCenterTab')}
           </TabBar.Item>
         </TabBar>
       </div>
     );
   }
 }
+
+export default Index;

@@ -16,7 +16,7 @@ const modelNotExisted = (app, model) =>
 export const getRouterConfig = app => {
   const routerConfig = {
     '/': {
-      component: dynamicWrapper(app, [], () => import('../routes/Home')),
+      component: dynamicWrapper(app, [], () => import('../routes/index')),
     },
     '/example': {
       component: dynamicWrapper(app, ['example'], () => import('../routes/IndexPage')),

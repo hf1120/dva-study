@@ -5,7 +5,6 @@
  */
 import React, { PureComponent } from 'react';
 import { TabBar } from 'antd-mobile';
-import _ from 'lodash';
 import Home from './Home';
 import MyCenter from './MyCenter';
 import styles from './index.less';
@@ -38,10 +37,9 @@ class Index extends PureComponent {
   };
 
   render() {
-    console.log(_({ a: { b: 2 } }));
     const { selectedTab } = this.state;
     return (
-      <div id={styles.header}>
+      <div id={styles.footer}>
         <TabBar
           unselectedTintColor="#949494"
           tintColor="#33A3F4"

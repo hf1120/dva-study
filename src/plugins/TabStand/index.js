@@ -8,8 +8,6 @@ import { TabBar } from 'antd-mobile';
 
 const TabStand = () => porps => {
   const { styl } = porps;
-  console.log('执行了');
-
   return class extends PureComponent {
     constructor() {
       super();

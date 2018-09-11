@@ -1,12 +1,14 @@
 @import '~antd-mobile/lib/style/themes/default.less';
 
-.center {
-  color: blue;
-  text-align: center;
-  width: 10rem;
-  height: 0.5rem;
-  background: gray;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  :global {
+    .am-tabs-content-wrap {
+      position: fixed !important;
+      top: 0 !important;
+    }
+  }
 }

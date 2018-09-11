@@ -5,8 +5,6 @@ import GridStand from 'plugins/GridStand';
 
 export default class Home extends PureComponent {
   render() {
-    console.log('home');
-
     return (
       <div>
         <Search styl={{ position: 'fixed', zIndex: 2, width: '100%' }} />

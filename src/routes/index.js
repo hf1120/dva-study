@@ -7,6 +7,7 @@ import React, { PureComponent } from 'react';
 import { TabBar } from 'antd-mobile';
 import Home from './Home';
 import MyCenter from './MyCenter';
+import IndexPage from './IndexPage';
 import styles from './index.less';
 
 class Index extends PureComponent {
@@ -25,6 +26,9 @@ class Index extends PureComponent {
         break;
       case 'myCenterTab':
         currentDom = <MyCenter />;
+        break;
+      case 'Koubei':
+        currentDom = <IndexPage />;
         break;
       default:
         currentDom = <Home />;
@@ -105,10 +109,10 @@ class Index extends PureComponent {
             title="Koubei"
             key="Koubei"
             badge="new"
-            selected={selectedTab === 'redTab'}
+            selected={selectedTab === 'Koubei'}
             onPress={() => {
               this.setState({
-                selectedTab: 'redTab',
+                selectedTab: 'Koubei',
               });
             }}
             data-seed="logId1"

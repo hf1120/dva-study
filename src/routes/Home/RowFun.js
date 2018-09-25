@@ -5,7 +5,7 @@
  */
 import React from 'react';
 
-const RowFun = ({ rowID, data }) => {
+/* const RowFun = ({ rowID, data }) => {
   let index = data.length - 1;
   if (index < 0) {
     index = data.length - 1;
@@ -34,6 +34,26 @@ const RowFun = ({ rowID, data }) => {
       </div>
     </div>
   );
+}; */
+
+const RowFun = ({ rowData, data }) => {
+  const arr = rowData.length >= 1 ? rowData : data;
+  return arr.map(item => {
+    return (
+      <li key={item.id}>
+        <a>
+          <div>
+            <img src={item.img} alt="赵丽颖" />
+          </div>
+          <p className="product-text">{item.des}</p>
+          <span className="product-price">
+            <i>¥</i>
+            {item.price}
+          </span>
+        </a>
+      </li>
+    );
+  });
 };
 
 export default RowFun;

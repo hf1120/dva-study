@@ -12,17 +12,12 @@ export default class ListViewHf extends PureComponent {
   }
 
   componentDidMount() {
-    console.log(8598989);
     // am-tabs-content-wrap
-    document
-      .querySelector('.am-tabs-pane-wrap')
-      .addEventListener('scroll', this.handleScroll, false);
+    document.querySelector('.am-tabs-pane-wrap').addEventListener('scroll', this.handleScroll);
   }
 
   componentWillUnmount() {
-    document.querySelector('.am-tabs-pane-wrap').removeEventListener('scroll', () => {
-      console.log('卸载');
-    });
+    document.querySelector('.am-tabs-pane-wrap').removeEventListener('scroll', this.handleScroll);
   }
 
   handleScroll = e => {

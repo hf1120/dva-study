@@ -16,6 +16,7 @@ module.exports = {
     jest: true,
     jasmine: true,
   },
+  //对规则进行细致的定义
   rules: {
     'generator-star-spacing': [0],
     'consistent-return': [0],
